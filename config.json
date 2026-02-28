@@ -1,0 +1,43 @@
+{
+  "modelMap": {
+    "plan": {
+      "primary": "anthropic/claude-opus-4-6",
+      "failover": "openai/gpt-4o"
+    },
+    "ui": {
+      "primary": "anthropic/claude-3-7-sonnet",
+      "failover": "google/gemini-2.0-flash-001"
+    },
+    "logic": {
+      "primary": "openai/gpt-5.3-codex",
+      "failover": "anthropic/claude-opus-4-6"
+    },
+    "debug": {
+      "primary": "anthropic/claude-3-5-haiku",
+      "failover": "openai/gpt-4o"
+    }
+  },
+  "recipes": {
+    "the-duo": {
+      "description": "Opus 4.6 + Codex 5.3 — each where they're strongest",
+      "overrides": {
+        "plan": {
+          "primary": "anthropic/claude-opus-4-6",
+          "failover": "openai/gpt-5.3-codex"
+        },
+        "ui": {
+          "primary": "openai/gpt-5.3-codex",
+          "failover": "anthropic/claude-opus-4-6"
+        },
+        "logic": {
+          "primary": "openai/gpt-5.3-codex",
+          "failover": "anthropic/claude-opus-4-6"
+        },
+        "debug": {
+          "primary": "anthropic/claude-opus-4-6",
+          "failover": "openai/gpt-5.3-codex"
+        }
+      }
+    }
+  }
+}

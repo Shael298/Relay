@@ -1,0 +1,6 @@
+.env
+relay-output/
+context.json
+src/
+*.log
+tsconfig.json

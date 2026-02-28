@@ -1,0 +1,9 @@
+.env
+node_modules/
+dist/
+relay-output/
+bobw-output/
+.claude/
+context.json
+tmp-*.txt
+*.log
