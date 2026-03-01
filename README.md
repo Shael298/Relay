@@ -3,7 +3,7 @@
 Combine the best of all coding models.
 
 ## TL;DR
-Relay is a CLI native tool that breaks your coding prompts into subtasks and assigns each to the best model for the job (ie planning to Opus 4.6 and complex logic to Codex 5.3), orchestrating a high-fidelity relay. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file. Still in early alpha, so some scaffolds may need small manual fixes.
+Relay is a CLI native tool that breaks your coding prompts into subtasks and assigns each to the best model for the job (ie planning to Opus 4.6 and complex logic to Codex 5.3), orchestrating a high-fidelity relay. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file. Still in early alpha, so there may be some bugs, but core concept of delegating to best coding model is shown.
 
 ## 5 Core Features
 1) Intent Classifier: Uses GPT-4o to instantly categorise your request into specialised tracks like Architecture, UI Design, or Logic Implementation.
