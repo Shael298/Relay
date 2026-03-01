@@ -6,10 +6,10 @@ Combine the best of all coding models.
 Relay is a CLI native tool that breaks your coding prompts into subtasks and assigns each to the best model for the job (ie planning to Opus 4.6 and complex logic to Codex 5.3), orchestrating a high-fidelity relay. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file. Still in early alpha, so some scaffolds may need small manual fixes.
 
 ## 5 Core Features
-1) Intent Classifier: Uses GPT-4o to instantly categorize your request into specialised tracks like Architecture, UI Design, or Logic Implementation.
+1) Intent Classifier: Uses GPT-4o to instantly categorise your request into specialised tracks like Architecture, UI Design, or Logic Implementation.
 2) Dynamic Model Map: A real-time routing table that sends each specific task to the current SOTA model best suited for it (e.g., Planning to Opus 4.6, Backend Logic to Codex 5.3).
 3) Double-Check Loop: An automated sanity check that detects non-compiling code or linting errors and triggers a "Failover" to a rival model family to fix the mistake.
-4) Context Sync: A persistent "Global State" node that summarizes and transfers technical specs between different models so no context is lost during handoffs.
+4) Context Sync: A persistent "Global State" node that summarises and transfers technical specs between different models so no context is lost during handoffs.
 5) Recipes: Custom recipes that allow you to lock specific models to specific stages, like forcing Opus for planning and Codex for execution.
 
   i) Default Recipe
