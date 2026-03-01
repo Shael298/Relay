@@ -31,7 +31,7 @@ Relay is a CLI native tool that breaks your coding prompts into subtasks and ass
 ## Scope for Alpha Prototype
 
 - This is an early alpha, so some scaffolds can still need manual fixes in some runs.
-- Only support creation for CLI apps currently (no web/mobile output)
+- Only support creation for **CLI apps** currently (no web/mobile output)
 - Writes generated project into `relay-output/<project-name>`
 - Prints clear handoff commands (`cd`, install, run)
 - Runs scaffold validation before marking projects as ready
