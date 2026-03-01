@@ -19,6 +19,7 @@ Relay is a native CLI tool that breaks your coding prompts into subtasks and ass
   | UI | Claude 3.7 Sonnet | Gemini 2.0 Flash |
   | LOGIC | GPT-5.3 Codex | Claude Opus 4.6 |
   | DEBUG | Claude 3.5 Haiku | GPT-4o |
+  
   ii) The-Duo Recipe
   | Intent | Primary | Failover |
   |---|---|---|
