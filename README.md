@@ -25,7 +25,7 @@ Relay is a Windows-first CLI that takes one prompt and scaffolds a runnable **CL
 ## Install
 
 ```bash
-git clone https://github.com/<your-org-or-user>/relay
+git clone https://github.com/Shael298/Relay.git
 cd relay
 npm install
 npm run build
