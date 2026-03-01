@@ -3,7 +3,7 @@
 Combine the best of all coding models.
 
 ## TL;DR
-Relay is a native CLI tool that breaks your coding prompts into subtasks and assigns each to the best model for the job. It orchestrates a high-fidelity relay, sending UI tasks to Claude 4.6 and complex logic to GPT-5.3 Codex. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file.
+Relay is a native CLI tool that breaks your coding prompts into subtasks and assigns each to the best model for the job. It orchestrates a high-fidelity relay, sending UI tasks to Claude 4.6 and complex logic to GPT-5.3 Codex. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file. Still in early alpha.
 
 ## 5 Core Features
 1) Intent Classifier: Uses a lightning-fast model to instantly categorize your request into specialized tracks like Architecture, UI Design, or Logic Implementation.
