@@ -11,6 +11,7 @@ Relay is a native CLI tool that breaks your coding prompts into subtasks and ass
 3) Double-Check Loop: An automated sanity check that detects non-compiling code or linting errors and triggers a "Failover" to a rival model family to fix the mistake.
 4) Context Sync: A persistent "Global State" node that summarizes and transfers technical specs between different models so no context is lost during handoffs.
 5) Recipes: Custom recipes that allow you to lock specific models to specific stages, like forcing Opus for planning and Codex for execution.
+
   i) Default Recipe
   | Intent | Primary | Failover |
   |---|---|---|
