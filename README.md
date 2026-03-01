@@ -1,21 +1,43 @@
 # Relay
 
-Relay is a Windows-first CLI that takes one prompt and scaffolds a runnable **CLI app** (Node.js or Python) to disk.
+Combine the best of all coding models.
 
-## Scope (Current MVP)
+## TL;DR
+Relay is a native CLI tool that breaks your coding prompts into subtasks and assigns each to the best model for the job. It orchestrates a high-fidelity relay, sending UI tasks to Claude 4.6 and complex logic to GPT-5.3 Codex. If a model produces an error, Relay automatically triggers a "failover" to a rival model family to fix the mistake. Then, all the code is scaffolded together into a final file.
 
-- CLI apps only (no web/mobile output)
-- Multi-step model routing with failover
+## 5 Core Features
+1) Intent Classifier: Uses a lightning-fast model to instantly categorize your request into specialized tracks like Architecture, UI Design, or Logic Implementation.
+2) Dynamic Model Map: A real-time routing table that sends each specific task to the current SOTA model best suited for it (e.g., UI to Claude, Backend Logic to GPT).
+3) Double-Check Loop: An automated sanity check that detects non-compiling code or linting errors and triggers a "Failover" to a rival model family to fix the mistake.
+4) Context Sync: A persistent "Global State" node that summarizes and transfers technical specs between different models so no context is lost during handoffs.
+5) Recipes: Custom recipes that allow you to lock specific models to specific stages, like forcing Opus for planning and Codex for execution.
+  i) Default Recipe
+  | Intent | Primary | Failover |
+  |---|---|---|
+  | PLAN | Claude Opus 4.6 | GPT-4o |
+  | UI | Claude 3.7 Sonnet | Gemini 2.0 Flash |
+  | LOGIC | GPT-5.3 Codex | Claude Opus 4.6 |
+  | DEBUG | Claude 3.5 Haiku | GPT-4o |
+  ii) The-Duo Recipe
+  | Intent | Primary | Failover |
+  |---|---|---|
+  | PLAN | Claude Opus 4.6 | GPT-5.3 Codex |
+  | UI | GPT-5.3 Codex | Claude Opus 4.6 |
+  | LOGIC | GPT-5.3 Codex | Claude Opus 4.6 |
+  | DEBUG | Claude Opus 4.6 | GPT-5.3 Codex |
+
+## Scope for Alpha Prototype
+
+- This is an early alpha, so some scaffolds can still need manual fixes in some runs.
+- CLI apps only currently (no web/mobile output)
 - Writes generated project into `relay-output/<project-name>`
 - Prints clear handoff commands (`cd`, install, run)
-- Does **not** auto-run generated apps
 - Runs scaffold validation before marking projects as ready
 
-## Alpha Status
-
-- This is an early alpha.
-- Generated projects can still need manual fixes in some runs.
-- If validation fails, Relay marks the scaffold as incomplete instead of claiming success.
+## Compared to perplexity computer
+1) Native CLI tool vs cloud-based, with laser focus on coding dev workflow
+2) Pay as you go through openrouter, no need for $200 subscription
+3) Raw model integrity vs silent downgrades (Perpelxity has been caught doing this)
 
 ## Requirements
 
